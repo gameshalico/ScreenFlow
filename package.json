@@ -1,0 +1,13 @@
+{
+  "name": "com.gameshalico.screenflow",
+  "version": "0.1.0",
+  "displayName": "Screen Flow",
+  "description": "Screen lifecycle and navigation framework for Unity",
+  "unity": "6000.3",
+  "dependencies": {
+    "com.cysharp.unitask": "2.5.10"
+  },
+  "author": {
+    "name": "gameshalico"
+  }
+}
