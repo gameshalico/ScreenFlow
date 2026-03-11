@@ -24,14 +24,15 @@ https://github.com/gameshalico/screen-flow.git
 `IScreen` を実装したクラスは以下のライフサイクルで管理されます。
 
 ```
-Initialize → Enter → Run → Exit → Cleanup
+Initialize → Enter → Run → (Exit) → Cleanup
 ```
+※ 上位のコンテナを破棄した場合など、Exitは呼ばれずにCleanupされることがあります
 
 | メソッド | 説明 |
 |---------|------|
 | `Initialize` | リソースの準備・初期化 |
 | `Enter` | 表示開始（フェードイン等） |
-| `Run` | 実行中のメインループ。キャンセルされるまで継続 |
+| `Run` | 実行中のメインループ。キャンセルされるまで継続されることを想定 |
 | `Exit` | 非表示処理（フェードアウト等） |
 | `Cleanup` | リソース解放 |
 
